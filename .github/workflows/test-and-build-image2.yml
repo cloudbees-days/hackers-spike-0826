@@ -34,9 +34,17 @@ jobs:
         with:
           name: junit.xml
           path: junit.xml
+
+      - name: Dump
+        run: |
+          echo "PWD: $PWD"
           
       - name: Dump workspace
-        run: find . 
+        run: |
+          find ${{ github.workspace }}
+      - name: Dump /home
+        run: |
+          find /home
 
       - name: publish GHA run test results
         uses: cloudbees-io-gha/publish-test-results@v2
