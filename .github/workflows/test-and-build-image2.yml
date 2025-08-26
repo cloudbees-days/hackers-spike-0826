@@ -20,6 +20,11 @@ jobs:
       - run: npm ci
       - run: npm run test:unit
 
+      - name: Dump test results
+        run: |
+          ls -al junit.xml
+          cat junit.xml
+
       - name: publish GHA run test results
         uses: cloudbees-io-gha/publish-test-results@v2
         with:
