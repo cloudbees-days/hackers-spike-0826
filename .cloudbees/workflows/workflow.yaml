@@ -21,4 +21,4 @@ jobs:
         uses: docker://amazon/aws-cli
         shell: bash
         run: |
-          echo "secret sw_goo3: ${{ secrets.sw_goo3 }}"
+          echo "secret spike_goo3: ${{ secrets.spike_goo3 }}"
